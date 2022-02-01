@@ -1,10 +1,6 @@
 import './style.css';
 import getAllData from './getDataFood.js';
 
-const subTitleTest = document.createElement('h2');
-subTitleTest.textContent = 'Hello from index.js file';
-document.body.appendChild(subTitleTest);
-
 // links to get data from food api
 const allBeefURL = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=Beef';
 // const allPastaURL = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=pasta';

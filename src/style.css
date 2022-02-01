@@ -1,10 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
 html,
 body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Quicksand', 'Courier New', Courier, monospace;
 }
 
 body {
-  background: blanchedalmond;
+  background: #fafafa;
+}
+
+.container {
+  height: 100vh;
+  max-width: 60rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.3fr 2.4fr 0.3fr;
+  grid-template-rows: 0.3fr 2.4fr 0.3fr;
+  gap: 0 0;
+  grid-auto-flow: row;
+  grid-template-areas:
+    '. header .'
+    '. main .'
+    '. footer .';
+}
+
+header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px #dbdbdb solid;
+}
+
+footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-top: 2px #dbdbdb solid;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0 0;
+  grid-auto-flow: row;
+  grid-template-areas:
+    '. . .'
+    '. . .'
+    '. . .';
+  grid-area: main;
+}
+
+.nav-bar-list {
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+li {
+  margin-left: 5rem;
+  cursor: pointer;
+}
+
+li:hover {
+  border-bottom: 2px solid #333;
+  font-weight: bold;
 }
