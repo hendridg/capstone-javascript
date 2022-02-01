@@ -4,9 +4,24 @@ const displayData = (arr) => {
   board.innerHTML = '';
 
   arr.forEach((food) => {
-    const item = document.createElement('div');
-    item.innerHTML = `<img src="${food.strMealThumb}" width="250px"><h5>${food.strMeal}</h5>`;
+    const item = document.createElement('article');
+    item.classList.add('card-food');
+    item.innerHTML = `
+        <div class="card-title">
+          <h5>${food.strMeal}</h5>
+        </div>
+        <div class="btn-recipe">
+          <button type="button">Recipe</button>
+        </div>
+        <div class="btn-liked">
+          <button type="button">Like</button>
+        </div>
+        <div class="card-img">
+         <img src="${food.strMealThumb}" class="img-food">        
+        </div>     
+    `;
     item.id = food.idMeal;
+    // console.log(food);
     board.appendChild(item);
   });
 };
