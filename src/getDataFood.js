@@ -1,6 +1,6 @@
 // function display an array of objects
 const displayData = (arr) => {
-  const board = document.getElementById('food');
+  const board = document.querySelector('.container-food-cards');
   board.innerHTML = '';
 
   arr.forEach((food) => {
