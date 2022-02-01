@@ -71,3 +71,37 @@ li:hover {
   border-bottom: 2px solid #333;
   font-weight: bold;
 }
+
+.popup {
+  position: relative;
+  cursor: pointer;
+}
+
+.popuptext {
+  width: 100%;
+  background-color: rgb(228, 195, 195);
+  color: rgb(56, 26, 26);
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.show {
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
