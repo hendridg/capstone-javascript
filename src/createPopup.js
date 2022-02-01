@@ -1,7 +1,8 @@
 const popup = document.getElementById('popup');
-//const popup = document.querySelector('.container-food-cards');
+const mainCont = document.querySelector('.container-food-cards');
 
 const closePopup = (elem) => {
+  mainCont.classList.toggle('no-grid');
   popup.removeChild(elem);
 }
 
@@ -14,7 +15,8 @@ const createPopup = () => {
   popupButon.innerHTML = 'X';
   popupButon.addEventListener('click', () => closePopup(myPopup));
   myPopup.classList.add('popuptext');
-  popup.classList.toggle("show");
+  myPopup.classList.toggle("show");
+  mainCont.classList.toggle('no-grid');
   myPopup.appendChild(popupText);
   myPopup.appendChild(popupButon);
   popup.appendChild(myPopup);

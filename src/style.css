@@ -43,6 +43,12 @@ footer {
   border-top: 2px #dbdbdb solid;
 }
 
+.no-grid {
+  display: flex;
+
+  width: 100%;
+}
+
 main {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -75,6 +81,7 @@ li:hover {
 .popup {
   position: relative;
   cursor: pointer;
+  flex-grow: 1;
 }
 
 .popuptext {
