@@ -16,6 +16,7 @@ h5 {
   padding: 0;
   margin: 0;
 }
+
 .container {
   height: 100vh;
   max-width: 60rem;
@@ -83,7 +84,7 @@ li:hover {
   display: grid;
   grid-template-columns: 1fr 1.4fr 0.6fr;
   grid-template-rows: 2fr 0.4fr 0.2fr;
-  gap: 0px 0px;
+  gap: 0;
   grid-template-areas:
     'card-img card-img card-img'
     'card-title card-title card-title'
@@ -110,6 +111,7 @@ li:hover {
   align-items: flex-start;
   padding: 0.2rem;
 }
+
 .btn-recipe {
   grid-area: btn-recipe;
   display: flex;
@@ -118,17 +120,13 @@ li:hover {
   padding: 0.2rem;
 }
 
-.btn-recipe > button {
+.btn-recipe button {
   background: rgb(221, 21, 21);
   border: none;
   color: white;
   font-weight: bold;
   padding: 0.1rem 0.4rem;
   cursor: pointer;
-}
-
-.btn-recipe > button:hover {
-  transform: scale(1.08);
 }
 
 .btn-liked {
@@ -139,15 +137,11 @@ li:hover {
   padding: 0.2rem;
 }
 
-.btn-liked > button {
+.btn-liked button {
   background: white;
   border: 1px solid #dbdbdb;
   color: rgb(221, 21, 21);
   font-weight: bold;
   padding: 0.1rem 0.4rem;
   cursor: pointer;
-}
-
-.btn-liked > button:hover {
-  transform: scale(1.08);
 }
