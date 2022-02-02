@@ -33,14 +33,18 @@ const displayData = (arr) => {
   });
 };
 
+export const displayCounter = (typeFoodSelected, count) => {
+  typeFoodSelected.innerHTML = `${typeFoodSelected.textContent} (${count})`;
+};
+
 // function to get images and title
-const getAllData = async (url) => {
+const getAllData = async (url, typeFoodSelected) => {
   const request = new Request(url);
   const response = await fetch(request);
   const responseJson = await response.json();
-  const responsInfo = responseJson.meals;
-
-  displayData(responsInfo);
+  const responseInfo = responseJson.meals;
+  displayCounter(typeFoodSelected, responseInfo.length);
+  displayData(responseInfo);
 };
 
 export { getAllData as default };

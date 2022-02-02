@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
 html,
 body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Quicksand", "Courier New", Courier, monospace;
+  font-family: 'Quicksand', 'Courier New', Courier, monospace;
 }
 
 body {
@@ -27,9 +27,9 @@ h5 {
   gap: 0.125rem 0.0125rem;
   grid-auto-flow: row;
   grid-template-areas:
-    ". header ."
-    ". main ."
-    ". footer .";
+    '. header .'
+    '. main .'
+    '. footer .';
 }
 
 header {
@@ -56,9 +56,9 @@ main {
   gap: 0.5rem 0.5rem;
   grid-auto-flow: row;
   grid-template-areas:
-    ". . ."
-    ". . ."
-    ". . .";
+    '. . .'
+    '. . .'
+    '. . .';
   grid-area: main;
 }
 
@@ -76,6 +76,11 @@ li {
 li:hover {
   border-bottom: 2px solid #333;
   font-weight: bold;
+}
+
+.selected {
+  font-weight: bold;
+  border-bottom: 2px solid #333;
 }
 
 /* card foods styles */
@@ -189,11 +194,21 @@ li:hover {
 
 /* Add animation (fade in the popup) */
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
