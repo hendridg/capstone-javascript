@@ -4,17 +4,17 @@ const displayComents = (arr, container) => {
   container.appendChild(title);
   const messageData = document.createElement('div');
   if (!arr.error) {
-    arr.forEach(element => {
+    arr.forEach((element) => {
       const messItem = document.createElement('div');
       messItem.innerHTML = `
       <span>${element.creation_date} - <strong>${element.username}:</strong> ${element.comment}</span><hr width="250px">`;
       messageData.appendChild(messItem);
     });
   } else {
-    messageData.innerHTML = `<span>Any Comments Yet</span><hr width="250px">`;
+    messageData.innerHTML = '<span>Any Comments Yet</span><hr width="250px">';
   }
   container.appendChild(messageData);
-}
+};
 
 // function to get all messages
 const getComments = async (id) => {
@@ -26,4 +26,4 @@ const getComments = async (id) => {
   return responseJson;
 };
 
-export {displayComents, getComments};
+export { displayComents, getComments };

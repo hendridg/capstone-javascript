@@ -7,9 +7,8 @@ const allBeefURL = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=Beef';
 // const allSeafoodURL = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood';
 
 // link to likes and message store api
- //const projectID = 'cq8n4ydnTGepOHztUKmY';
+// const projectID = 'cq8n4ydnTGepOHztUKmY';
 // const likesLink = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/cq8n4ydnTGepOHztUKmY/likes/';
 // const postMessageLink = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/cq8n4ydnTGepOHztUKmY/comments';
-
 
 getAllData(allBeefURL);
