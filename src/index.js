@@ -11,6 +11,6 @@ const allBeefURL = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=Beef';
 // const projectID = 'cq8n4ydnTGepOHztUKmY';
 // const likesLink = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/cq8n4ydnTGepOHztUKmY/likes/';
 // const postMessageLink = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/cq8n4ydnTGepOHztUKmY/comments';
-// const getMessagesLink = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/cq8n4ydnTGepOHztUKmY/comments?item_id='; // you need to add item id at end of url
+
 
 getAllData(allBeefURL);
