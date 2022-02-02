@@ -1,5 +1,5 @@
 const hidenItems = () => {
-  const items = document.querySelectorAll('.items');
+  const items = document.querySelectorAll('.card-food');
   items.forEach((e) => {
     e.classList.toggle('hiden');
   });

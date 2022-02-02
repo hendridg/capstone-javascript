@@ -24,7 +24,6 @@ const displayData = (arr) => {
         </div>     
     `;
     item.id = food.idMeal;
-    item.classList.add('items');
     // event listener just for test
     item.addEventListener('click', () => {
       getItemData(food);
