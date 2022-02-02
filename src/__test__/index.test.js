@@ -1,11 +1,33 @@
+import { displayCounter } from '../getDataFood.js';
+
 beforeAll(() => {
   document.body.innerHTML = `  
-    <h1 class='title'>Webpack Config</h1>
+  <div class="container">
+    <header>
+        <div class="logo">
+            <h1>Logo Page</h1>
+        </div>
+        <nav class="nav-bar">
+            <ul class="nav-bar-list">
+                <li class="selected">Beef</li>
+                <li>Pasta</li>
+                <li>Seafood</li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container-food-cards">
+    </main>
+    <footer>
+        <h4>&copy; Created by Microverse under CC license</h4>
+    </footer>
+  </div>
   `;
 });
-describe('Check testing config', () => {
-  test('Should be h1 element ', () => {
-    const h1Element = document.querySelector('h1');
-    expect(h1Element.textContent).toEqual('Webpack Config');
+
+describe('Check counter all item function', () => {
+  test('Should be show Beef (42) ', () => {
+    const beefElement = document.querySelector('li');
+    displayCounter(beefElement, 42);
+    expect(beefElement.textContent).toEqual('Beef (42)');
   });
 });
