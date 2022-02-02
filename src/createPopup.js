@@ -1,9 +1,11 @@
-const popup = document.getElementById('popup');
+import { hidenItems } from "./getDataFood.js";
+
 const mainCont = document.querySelector('.container-food-cards');
 
 const closePopup = (elem) => {
   mainCont.classList.toggle('no-grid');
-  popup.removeChild(elem);
+  hidenItems();
+  mainCont.removeChild(elem);
 }
 
 const createPopup = () => {
@@ -19,7 +21,7 @@ const createPopup = () => {
   mainCont.classList.toggle('no-grid');
   myPopup.appendChild(popupText);
   myPopup.appendChild(popupButon);
-  popup.appendChild(myPopup);
+  mainCont.appendChild(myPopup);
 }
 
 export {createPopup as default};

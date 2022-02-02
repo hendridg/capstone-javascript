@@ -1,6 +1,5 @@
 import "./style.css";
-import getAllData from "./getDataFood.js";
-import createPopup from "./createPopup.js";
+import {getAllData} from "./getDataFood.js";
 
 // links to get data from food api
 const allBeefURL = "https://www.themealdb.com/api/json/v1/1/filter.php?c=Beef";
@@ -15,7 +14,6 @@ const allBeefURL = "https://www.themealdb.com/api/json/v1/1/filter.php?c=Beef";
 // const postMessageLink = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/cq8n4ydnTGepOHztUKmY/comments';
 // const getMessagesLink = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/cq8n4ydnTGepOHztUKmY/comments?item_id='; // you need to add item id at end of url
 
-//getAllData(allBeefURL);
-
-const myButton = document.getElementById('button');
-myButton.addEventListener('click', () => createPopup());
+const beefButton = document.getElementById('beefButton');
+beefButton.addEventListener('click', () => getAllData(allBeefURL));
+getAllData(allBeefURL);

@@ -45,8 +45,12 @@ footer {
 
 .no-grid {
   display: flex;
-
+  flex-direction: column;
   width: 100%;
+}
+
+.hiden {
+  display: none;
 }
 
 main {
@@ -78,25 +82,20 @@ li:hover {
   font-weight: bold;
 }
 
-.popup {
-  position: relative;
-  cursor: pointer;
-  flex-grow: 1;
-}
 
 .popuptext {
+  cursor: pointer;
+  flex-grow: 1;
   width: 100%;
-  background-color: rgb(228, 195, 195);
+  height: 70vh;
+  background-color: rgb(177, 142, 142);
   color: rgb(56, 26, 26);
   text-align: center;
   border-radius: 6px;
   padding: 8px 0;
-  z-index: 1;
-  position: absolute;
-  top: 0;
 }
 
-/* Toggle this class when clicking on the popup container (hide and show the popup) */
+/* Toggle this class when clicking on the popup container */
 .show {
   -webkit-animation: fadeIn 1s;
   animation: fadeIn 1s

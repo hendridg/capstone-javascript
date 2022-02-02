@@ -1,3 +1,11 @@
+import createPopup from "./createPopup.js";
+
+const hidenItems = () => {
+  const items = document.querySelectorAll('.items');
+  items.forEach(e => {
+    e.classList.toggle('hiden');
+  })
+}
 // function display an array of objects
 const displayData = (arr) => {
   const board = document.querySelector('.container-food-cards');
@@ -7,6 +15,12 @@ const displayData = (arr) => {
     const item = document.createElement('div');
     item.innerHTML = `<img src="${food.strMealThumb}" width="250px"><h5>${food.strMeal}</h5>`;
     item.id = food.idMeal;
+    item.classList.add('items');
+    // event listener just for test
+    item.addEventListener('click', () => {
+      createPopup();
+      hidenItems();
+    });
     board.appendChild(item);
   });
 };
@@ -21,4 +35,4 @@ const getAllData = async (url) => {
   displayData(responsInfo);
 };
 
-export { getAllData as default };
+export { getAllData, hidenItems };
