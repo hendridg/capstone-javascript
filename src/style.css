@@ -166,7 +166,8 @@ li:hover {
   flex-direction: column;
   flex-grow: 1;
   width: 100%;
-  height: 70vh;
+
+  /* height: 70vh; */
   background-color: rgb(177 142 142);
   color: rgb(56 26 26);
   text-align: center;

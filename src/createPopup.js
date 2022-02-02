@@ -1,4 +1,5 @@
 import hidenItems from './hidenItems.js';
+import { displayComents, getComments } from './display-coments.js';
 
 const mainCont = document.querySelector('.container-food-cards');
 
@@ -9,12 +10,15 @@ const closePopup = (elem) => {
 };
 
 // function to display popup
-const createPopup = (element, details) => {
+const createPopup = (details, msgDat) => {
   const myPopup = document.createElement('div');
   const popupButon = document.createElement('button');
   const itemdata = document.createElement('div');
-  itemdata.innerHTML = `<img src="${element.strMealThumb}" width="250px"><h5>${element.strMeal}</h5><p>Ingredients: ${details.strIngredient1}, ${details.strIngredient2}, ${details.strIngredient3}, ${details.strIngredient4}, ${details.strIngredient5}</p>`;
-  itemdata.id = element.idMeal;
+  const messageContainer = document.createElement('div');
+  displayComents(msgDat, messageContainer);
+
+  itemdata.innerHTML = `<img src="${details.strMealThumb}" width="250px"><h2>${details.strMeal}</h2><p><strong>Ingredients:</strong> ${details.strIngredient1}, ${details.strIngredient2}, ${details.strIngredient3}, ${details.strIngredient4}, ${details.strIngredient5}</p>`;
+  itemdata.id = details.idMeal;
   myPopup.id = 'myPopup';
   popupButon.innerHTML = 'X';
   popupButon.addEventListener('click', () => closePopup(myPopup));
@@ -23,19 +27,21 @@ const createPopup = (element, details) => {
   mainCont.classList.toggle('no-grid');
   myPopup.appendChild(popupButon);
   myPopup.appendChild(itemdata);
+  myPopup.appendChild(messageContainer);
   mainCont.appendChild(myPopup);
 };
 
 // function to get each element data
-const getItemData = async (elem) => {
-  const id = elem.idMeal;
+const getItemData = async (id) => {
   const foodItemDataURL = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=';
   const request = new Request(foodItemDataURL + id);
   const response = await fetch(request);
   const responseJson = await response.json();
   const responsInfo = responseJson.meals[0];
 
-  createPopup(elem, responsInfo);
+  const messageData = await getComments(id);
+
+  createPopup(responsInfo, messageData);
 };
 
 export { getItemData as default };
