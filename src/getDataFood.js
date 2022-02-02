@@ -26,7 +26,7 @@ const displayData = (arr) => {
     item.id = food.idMeal;
     // event listener just for test
     item.addEventListener('click', () => {
-      getItemData(food);
+      getItemData(food.idMeal);
       hidenItems();
     });
     board.appendChild(item);
