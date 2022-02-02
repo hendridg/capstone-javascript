@@ -1,3 +1,6 @@
+import getItemData from './createPopup.js';
+import hidenItems from './hidenItems.js';
+
 // function display an array of objects
 const displayData = (arr) => {
   const board = document.querySelector('.container-food-cards');
@@ -21,7 +24,11 @@ const displayData = (arr) => {
         </div>     
     `;
     item.id = food.idMeal;
-    // console.log(food);
+    // event listener just for test
+    item.addEventListener('click', () => {
+      getItemData(food);
+      hidenItems();
+    });
     board.appendChild(item);
   });
 };
