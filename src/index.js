@@ -5,7 +5,6 @@ import getAllData from './getDataFood.js';
 const allBeefURL = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=Beef';
 // const allPastaURL = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=pasta';
 // const allSeafoodURL = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood';
-// const foodItemDataURL = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i='; // you need to add item id at end url
 
 // // link to likes and message store api
 

@@ -1,4 +1,4 @@
-import createPopup from './createPopup.js';
+import getItemData from './createPopup.js';
 import hidenItems from './hidenItems.js';
 
 // function display an array of objects
@@ -13,7 +13,7 @@ const displayData = (arr) => {
     item.classList.add('items');
     // event listener just for test
     item.addEventListener('click', () => {
-      createPopup();
+      getItemData(food);
       hidenItems();
     });
     board.appendChild(item);

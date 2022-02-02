@@ -8,20 +8,33 @@ const closePopup = (elem) => {
   mainCont.removeChild(elem);
 };
 
-const createPopup = () => {
+// function to get each element data
+const getItemData = async (elem) => {
+  const id = elem.idMeal;
+  const foodItemDataURL = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=';
+  const request = new Request(foodItemDataURL + id);
+  const response = await fetch(request);
+  const responseJson = await response.json();
+  const responsInfo = responseJson.meals[0];
+  
+  createPopup(elem, responsInfo);
+};
+
+const createPopup = (element, details) => {
   const myPopup = document.createElement('div');
-  const popupText = document.createElement('span');
   const popupButon = document.createElement('button');
+  const itemdata = document.createElement('div');
+  itemdata.innerHTML = `<img src="${element.strMealThumb}" width="250px"><h5>${element.strMeal}</h5><p>Ingredients: ${details.strIngredient1}, ${details.strIngredient2}, ${details.strIngredient3}, ${details.strIngredient4}, ${details.strIngredient5}</p>`;
+  itemdata.id = element.idMeal;
   myPopup.id = 'myPopup';
-  popupText.innerText = 'Popup text...';
   popupButon.innerHTML = 'X';
   popupButon.addEventListener('click', () => closePopup(myPopup));
   myPopup.classList.add('popuptext');
   myPopup.classList.toggle('show');
   mainCont.classList.toggle('no-grid');
-  myPopup.appendChild(popupText);
   myPopup.appendChild(popupButon);
+  myPopup.appendChild(itemdata);
   mainCont.appendChild(myPopup);
 };
 
-export { createPopup as default };
+export { getItemData as default };
