@@ -1,11 +1,6 @@
-import createPopup from "./createPopup.js";
+import createPopup from './createPopup.js';
+import hidenItems from './hidenItems.js';
 
-const hidenItems = () => {
-  const items = document.querySelectorAll('.items');
-  items.forEach(e => {
-    e.classList.toggle('hiden');
-  })
-}
 // function display an array of objects
 const displayData = (arr) => {
   const board = document.querySelector('.container-food-cards');
@@ -35,4 +30,4 @@ const getAllData = async (url) => {
   displayData(responsInfo);
 };
 
-export { getAllData, hidenItems };
+export { getAllData as default };
