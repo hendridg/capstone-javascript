@@ -33,7 +33,7 @@ const displayData = (arr) => {
   });
 };
 
-const displayCounter = (typeFoodSelected, count) => {
+export const displayCounter = (typeFoodSelected, count) => {
   typeFoodSelected.innerHTML = `${typeFoodSelected.textContent} (${count})`;
 };
 
