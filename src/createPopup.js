@@ -8,18 +8,7 @@ const closePopup = (elem) => {
   mainCont.removeChild(elem);
 };
 
-// function to get each element data
-const getItemData = async (elem) => {
-  const id = elem.idMeal;
-  const foodItemDataURL = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=';
-  const request = new Request(foodItemDataURL + id);
-  const response = await fetch(request);
-  const responseJson = await response.json();
-  const responsInfo = responseJson.meals[0];
-  
-  createPopup(elem, responsInfo);
-};
-
+// function to display popup
 const createPopup = (element, details) => {
   const myPopup = document.createElement('div');
   const popupButon = document.createElement('button');
@@ -35,6 +24,18 @@ const createPopup = (element, details) => {
   myPopup.appendChild(popupButon);
   myPopup.appendChild(itemdata);
   mainCont.appendChild(myPopup);
+};
+
+// function to get each element data
+const getItemData = async (elem) => {
+  const id = elem.idMeal;
+  const foodItemDataURL = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=';
+  const request = new Request(foodItemDataURL + id);
+  const response = await fetch(request);
+  const responseJson = await response.json();
+  const responsInfo = responseJson.meals[0];
+
+  createPopup(elem, responsInfo);
 };
 
 export { getItemData as default };
