@@ -1,6 +1,6 @@
 const countComment = (arr, title) => {
   const counter = ` (${arr.length})`;
-  title.innerText += counter;
+  title.innerHTML += counter;
 };
 
 const displayComents = (arr, container) => {
@@ -34,4 +34,4 @@ const getComments = async (id) => {
   return responseJson;
 };
 
-export { displayComents, getComments };
+export { displayComents, getComments, countComment };
