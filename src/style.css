@@ -201,6 +201,20 @@ li:hover {
 .mesgContent input,
 .mesgContent textarea {
   margin-bottom: 10px;
+  color: #381a1a;
+  border-radius: 6px;
+  font-size: medium;
+}
+
+.mesgContent input[type=button] {
+  background-color: rgb(177 142 142);
+  border: 1px solid #381a1a;
+  font-weight: bold;
+}
+
+textarea:focus, 
+input:focus{
+  outline: none;
 }
 
 .mesgContent div {
