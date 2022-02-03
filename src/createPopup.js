@@ -18,7 +18,7 @@ const createPopup = (details, msgDat) => {
   const messageContainer = document.createElement('div');
   const newMessCont = document.createElement('div');
   displayComents(msgDat, messageContainer);
-  newMessageForm(newMessCont);
+  newMessageForm(newMessCont, details.idMeal);
 
   itemdata.innerHTML = `<img src="${details.strMealThumb}" width="250px"><h2>${details.strMeal}</h2><p><strong>Ingredients:</strong> ${details.strIngredient1}, ${details.strIngredient2}, ${details.strIngredient3}, ${details.strIngredient4}, ${details.strIngredient5}</p>`;
   itemdata.id = details.idMeal;

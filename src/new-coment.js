@@ -21,18 +21,27 @@ const postNewMessage = async (id, name, text) => {
   console.log(responseJson);
 };
 
-const newMessageForm = (container) => {
+const newMessageForm = (container, itemId) => {
   const formNewMessage = document.createElement('div');
-  formNewMessage.innerHTML = `<h3>Add a Comment</h3>
-  <form action="/action_page.php">
-    <input type="text" name="username" id="username" placeholder="Your name">
-    <textarea id="comment" name="comment" rows="4" cols="30" placeholder="Your comment"></textarea>
-    <input type="button" value="Comment" id="button">
-  </form>`;
+  formNewMessage.innerHTML = `<h3>Add a Comment</h3>`;
   formNewMessage.classList.add('mesgContent');
-  const userName = document.getElementById('username');
-  const textMessage = document.getElementById('comment');
-  const button = document.getElementById('button');
+  const userName = document.createElement('input');
+  userName.type = 'text';
+  userName.name = 'username';
+  userName.placeholder= "Your name";
+  const textMessage = document.createElement('textarea');
+  textMessage.name="comment";
+  textMessage.rows="4";
+  textMessage.cols="30";
+  textMessage.placeholder="Your comment";
+  const button = document.createElement('input');
+  button.type="button";
+  button.value="Comment";
+  button.addEventListener('click', () => console.log('I am working!'));
+  formNewMessage.appendChild(userName);
+  formNewMessage.appendChild(textMessage);
+  formNewMessage.appendChild(button);
+
   container.appendChild(formNewMessage);
 }
 
