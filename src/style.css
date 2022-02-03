@@ -118,14 +118,6 @@ li:hover {
 }
 
 .btn-recipe {
-  grid-area: btn-recipe;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
-  padding: 0.2rem;
-}
-
-.btn-recipe button {
   background: rgb(221, 21, 21);
   border: none;
   color: white;
@@ -134,15 +126,15 @@ li:hover {
   cursor: pointer;
 }
 
-.btn-liked {
+/* .btn-liked {
   grid-area: btn-liked;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
   padding: 0.2rem;
-}
+} */
 
-.btn-liked button {
+.btn-liked {
   background: white;
   border: 1px solid #dbdbdb;
   color: rgb(221, 21, 21);
