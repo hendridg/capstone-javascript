@@ -17,4 +17,8 @@ export const addLikeToItem = async (itemId) => {
   return response;
 };
 
-export const getLikesToItems = async () => {};
+export const getLikesToItems = async () => {
+  const response = await fetch(likesLink);
+  const data = await response.json();
+  return data;
+};
