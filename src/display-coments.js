@@ -1,7 +1,7 @@
 const countComment = (arr, title) => {
   const counter = ` (${arr.length})`;
-  title.innerText = title.innerText + counter;
-}
+  title.innerText += counter;
+};
 
 const displayComents = (arr, container) => {
   container.innerHTML = '';
@@ -18,7 +18,7 @@ const displayComents = (arr, container) => {
       messageData.appendChild(messItem);
     });
   } else {
-    title.innerText = title.innerText + " (0)";
+    title.innerText += ' (0)';
     messageData.innerHTML = '<span>Any Comments Yet</span><hr width="250px">';
   }
   container.appendChild(messageData);

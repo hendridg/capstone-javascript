@@ -1,4 +1,3 @@
-import getItemData from './createPopup.js';
 import { displayComents, getComments } from './display-coments.js';
 
 // function to post element
