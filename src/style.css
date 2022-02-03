@@ -193,6 +193,23 @@ li:hover {
   animation: fadeIn 1s;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100px;
+}
+form input,
+form textarea {
+  margin-bottom: 10px;
+}
+.mesgContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
 /* Add animation (fade in the popup) */
 @keyframes fadeIn {
   from {
