@@ -16,10 +16,18 @@ const postNewMessage = async (id, name, text) => {
   }
   
   const response = await fetch(request, data);
-  const responseJson = await response.json();
+  const responseJson = await response.text();
 
   console.log(responseJson);
 };
+
+const newMessage = (id, user, message) => {
+  if (user.value !== '' && message.value !== '') {
+    postNewMessage(id, user.value, message.value);
+    user.value = '';
+    message.value = '';
+  }
+}
 
 const newMessageForm = (container, itemId) => {
   const formNewMessage = document.createElement('div');
@@ -37,7 +45,7 @@ const newMessageForm = (container, itemId) => {
   const button = document.createElement('input');
   button.type="button";
   button.value="Comment";
-  button.addEventListener('click', () => console.log('I am working!'));
+  button.addEventListener('click', () => newMessage(itemId, userName, textMessage));
   formNewMessage.appendChild(userName);
   formNewMessage.appendChild(textMessage);
   formNewMessage.appendChild(button);
