@@ -24,7 +24,8 @@ const createPopup = (details, msgDat) => {
   displayComents(msgDat, messageContainer);
   newMessageForm(newMessCont, details.idMeal);
 
-  itemdata.innerHTML = `<img src="${details.strMealThumb}" width="250px"><h2>${details.strMeal}</h2><p><strong>Ingredients:</strong> ${details.strIngredient1}, ${details.strIngredient2}, ${details.strIngredient3}, ${details.strIngredient4}, ${details.strIngredient5}</p>`;
+  itemdata.innerHTML = `<img src="${details.strMealThumb}" width="250px"><h2>${details.strMeal}</h2><h4>Ingredients:</h4><p>${details.strIngredient1}, ${details.strIngredient2}, ${details.strIngredient3}, ${details.strIngredient4}, ${details.strIngredient5}</p><h4>Recipe:</h4>
+  <p class="recipe">${details.strInstructions}</p>`;
   itemdata.id = details.idMeal;
   myPopup.id = 'myPopup';
   popupButon.innerHTML = 'X';

@@ -1,5 +1,5 @@
 import { displayCounter } from '../getDataFood.js';
-import {countComment} from '../displayComents.js';
+import { countComment } from '../displayComents.js';
 
 beforeAll(() => {
   document.body.innerHTML = `  
@@ -42,7 +42,7 @@ describe('Check comments counter function', () => {
     <div><span>New comment 3</span></div>`;
     const title = document.querySelector('h3');
     const array = document.querySelectorAll('span');
-    
+
     countComment(array, title);
 
     expect(title.innerHTML).toEqual('Comments (3)');

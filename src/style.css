@@ -12,9 +12,19 @@ body {
   background: #fafafa;
 }
 
-h5 {
+h5,
+h4 {
   padding: 0;
   margin: 0;
+}
+
+h2 {
+  text-align: center;
+}
+
+p {
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .container {
@@ -180,10 +190,13 @@ li:hover {
   font-size: xx-large;
 }
 
-/* Toggle this class when clicking on the popup container */
 .show {
   animation: fadeIn 1s;
-  animation: fadeIn 1s;
+}
+
+.recipe {
+  height: 200px;
+  overflow-y: scroll;
 }
 
 .mesgFormContainer {
@@ -213,8 +226,8 @@ li:hover {
   padding: 5px;
 }
 
-textarea:focus, 
-input:focus{
+textarea:focus,
+input:focus {
   outline: none;
 }
 
