@@ -1,11 +1,12 @@
 const countComment = (arr, title) => {
-  const counter = `(${arr.length})`;
+  const counter = ` (${arr.length})`;
   title.innerText = title.innerText + counter;
 }
 
 const displayComents = (arr, container) => {
+  container.innerHTML = '';
   const title = document.createElement('h3');
-  title.innerHTML = 'Comments ';
+  title.innerHTML = 'Comments';
   container.appendChild(title);
   const messageData = document.createElement('div');
   if (!arr.error) {
@@ -17,7 +18,7 @@ const displayComents = (arr, container) => {
       messageData.appendChild(messItem);
     });
   } else {
-    title.innerText = title.innerText + "(0)";
+    title.innerText = title.innerText + " (0)";
     messageData.innerHTML = '<span>Any Comments Yet</span><hr width="250px">';
   }
   container.appendChild(messageData);
