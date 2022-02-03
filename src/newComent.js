@@ -1,4 +1,4 @@
-import { displayComents, getComments } from './display-coments.js';
+import { displayComents, getComments } from './displayComents.js';
 
 // function to post element
 const postNewMessage = async (id, name, text) => {
