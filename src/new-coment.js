@@ -5,20 +5,17 @@ const postNewMessage = async (id, name, text) => {
   const data = {
     method: 'POST',
     headers: {
-    'Accept': 'application/json',
-    'Content-Type': 'application/json'
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ 
-      "item_id": id,
-      "username": name,
-      "comment": text 
+    body: JSON.stringify({
+      item_id: id,
+      username: name,
+      comment: text,
     }),
-  }
-  
-  const response = await fetch(request, data);
-  const responseJson = await response.text();
+  };
 
-  console.log(responseJson);
+  await fetch(request, data);
 };
 
 const newMessage = (id, user, message) => {
@@ -27,30 +24,30 @@ const newMessage = (id, user, message) => {
     user.value = '';
     message.value = '';
   }
-}
+};
 
 const newMessageForm = (container, itemId) => {
   const formNewMessage = document.createElement('div');
-  formNewMessage.innerHTML = `<h3 class="aligCener">Add a Comment</h3>`;
+  formNewMessage.innerHTML = '<h3 class="aligCener">Add a Comment</h3>';
   formNewMessage.classList.add('mesgContent');
   const userName = document.createElement('input');
   userName.type = 'text';
   userName.name = 'username';
-  userName.placeholder= "Your name";
+  userName.placeholder = 'Your name';
   const textMessage = document.createElement('textarea');
-  textMessage.name="comment";
-  textMessage.rows="4";
-  textMessage.cols="30";
-  textMessage.placeholder="Your comment";
+  textMessage.name = 'comment';
+  textMessage.rows = '4';
+  textMessage.cols = '30';
+  textMessage.placeholder = 'Your comment';
   const button = document.createElement('input');
-  button.type="button";
-  button.value="Comment";
+  button.type = 'button';
+  button.value = 'Comment';
   button.addEventListener('click', () => newMessage(itemId, userName, textMessage));
   formNewMessage.appendChild(userName);
   formNewMessage.appendChild(textMessage);
   formNewMessage.appendChild(button);
 
   container.appendChild(formNewMessage);
-}
+};
 
-export {newMessageForm as default};
+export { newMessageForm as default };

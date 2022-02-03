@@ -16,7 +16,6 @@ const allSeafoodURL = `
 // const projectID = 'cq8n4ydnTGepOHztUKmY';
 // const likesLink = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/cq8n4ydnTGepOHztUKmY/likes/';
 
-
 liBeefElement.addEventListener('click', () => {
   typeFoodSelected = liBeefElement;
   liBeefElement.classList.add('selected');
