@@ -1,9 +1,16 @@
+const countComment = (arr, title) => {
+  const counter = ` (${arr.length})`;
+  title.innerText += counter;
+};
+
 const displayComents = (arr, container) => {
+  container.innerHTML = '';
   const title = document.createElement('h3');
-  title.innerHTML = 'Comments:';
+  title.innerHTML = 'Comments';
   container.appendChild(title);
   const messageData = document.createElement('div');
   if (!arr.error) {
+    countComment(arr, title);
     arr.forEach((element) => {
       const messItem = document.createElement('div');
       messItem.innerHTML = `
@@ -11,6 +18,7 @@ const displayComents = (arr, container) => {
       messageData.appendChild(messItem);
     });
   } else {
+    title.innerText += ' (0)';
     messageData.innerHTML = '<span>Any Comments Yet</span><hr width="250px">';
   }
   container.appendChild(messageData);
@@ -22,7 +30,6 @@ const getComments = async (id) => {
   const request = new Request(getMessagesLink + id);
   const response = await fetch(request);
   const responseJson = await response.json();
-
   return responseJson;
 };
 

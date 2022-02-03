@@ -1,3 +1,5 @@
+import { displayComents, getComments } from './displayComents.js';
+
 // function to post element
 const postNewMessage = async (id, name, text) => {
   const postMessageLink = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/cq8n4ydnTGepOHztUKmY/comments';
@@ -16,6 +18,9 @@ const postNewMessage = async (id, name, text) => {
   };
 
   await fetch(request, data);
+  const arr = await getComments(id);
+  const container = document.getElementById('mesgContainer');
+  displayComents(arr, container);
 };
 
 const newMessage = (id, user, message) => {
