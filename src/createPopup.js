@@ -15,8 +15,10 @@ const createPopup = (details, msgDat) => {
   const myPopup = document.createElement('div');
   const popupButon = document.createElement('button');
   const itemdata = document.createElement('div');
+  itemdata.classList.add('mesgFormContainer');
   const messageContainer = document.createElement('div');
   messageContainer.id = 'mesgContainer';
+  messageContainer.classList.add('mesgFormContainer');
   const newMessCont = document.createElement('div');
   newMessCont.classList.add('mesgFormContainer');
   displayComents(msgDat, messageContainer);
