@@ -15,7 +15,6 @@ const allSeafoodURL = `
 // link to likes and message store api
 // const projectID = 'cq8n4ydnTGepOHztUKmY';
 // const likesLink = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/cq8n4ydnTGepOHztUKmY/likes/';
-// const postMessageLink = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/cq8n4ydnTGepOHztUKmY/comments';
 
 liBeefElement.addEventListener('click', () => {
   typeFoodSelected = liBeefElement;
