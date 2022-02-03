@@ -1,5 +1,6 @@
 import getItemData from './createPopup.js';
 import hidenItems from './hidenItems.js';
+import { addLikeToItem } from './likeDataApi.js';
 
 // function display an array of objects
 const displayData = (arr) => {
@@ -8,26 +9,30 @@ const displayData = (arr) => {
 
   arr.forEach((food) => {
     const item = document.createElement('article');
+    item.id = food.idMeal;
     item.classList.add('card-food');
     item.innerHTML = `
         <div class="card-title">
           <h5>${food.strMeal}</h5>
+        </div>        
+        <button type="button" class="btn-recipe">Recipe</button>
+        <div>        
         </div>
-        <div class="btn-recipe">
-          <button type="button">Recipe</button>
-        </div>
-        <div class="btn-liked">
-          <button type="button">Like</button>
-        </div>
+          <button type="button" class="btn-liked">Like</button>
         <div class="card-img">
          <img src="${food.strMealThumb}" class="img-food">        
         </div>     
     `;
-    item.id = food.idMeal;
+
+    const btnRecipeElement = item.querySelector('.btn-recipe');
+    const btnLikedElement = item.querySelector('.btn-liked');
     // event listener just for test
-    item.addEventListener('click', () => {
+    btnRecipeElement.addEventListener('click', () => {
       getItemData(food.idMeal);
       hidenItems();
+    });
+    btnLikedElement.addEventListener('click', () => {
+      addLikeToItem(food.idMeal);
     });
     board.appendChild(item);
   });
