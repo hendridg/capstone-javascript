@@ -135,12 +135,16 @@ li:hover {
 } */
 
 .btn-liked {
+  cursor: pointer;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
   background: white;
-  border: 1px solid #dbdbdb;
+  border: none;
   color: rgb(221, 21, 21);
   font-weight: bold;
-  padding: 0.1rem 0.4rem;
-  cursor: pointer;
+  font-size: 0.8em;
+  padding: 0.1rem 0.2rem;
 }
 
 .no-grid {
