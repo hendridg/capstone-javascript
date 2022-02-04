@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+html,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', 'Courier New', Courier, monospace;
+}
+
+body {
+  background: #fafafa;
+}
+
+h5,
+h4 {
+  padding: 0;
+  margin: 0;
+}
+
+h2 {
+  text-align: center;
+}
+
+p {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.container {
+  height: 100vh;
+  max-width: 60rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.3fr 2.4fr 0.3fr;
+  grid-template-rows: 0.3fr 2.4fr 0.3fr;
+  gap: 0.125rem 0.0125rem;
+  grid-auto-flow: row;
+  grid-template-areas:
+    '. header .'
+    '. main .'
+    '. footer .';
+}
+
+header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 2px #dbdbdb solid;
+  color: #333;
+  height: 100px;
+  background: no-repeat center/100% url('./assets/cookBanner3.jpg');
+}
+
+footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-top: 2px #dbdbdb solid;
+}
+
+main {
+  margin: 1rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0.5rem 0.5rem;
+  grid-auto-flow: row;
+  grid-template-areas:
+    '. . .'
+    '. . .'
+    '. . .';
+  grid-area: main;
+}
+
+.logo {
+  display: flex;
+  margin: 5px;
+  align-items: center;
+}
+
+.logo * {
+  padding: 10px;
+  margin: 0;
+  font-family: 'Brush Script MT', cursive;
+}
+
+.nav-bar-list {
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+li {
+  margin-left: 5rem;
+  cursor: pointer;
+}
+
+li:hover {
+  border-bottom: 2px solid #333;
+  font-weight: bold;
+}
+
+.selected {
+  font-weight: bold;
+  border-bottom: 2px solid #333;
+}
+
+/* card foods styles */
+
+.card-food {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr 0.6fr;
+  grid-template-rows: 2fr 0.4fr 0.2fr;
+  gap: 0;
+  grid-template-areas:
+    'card-img card-img card-img'
+    'card-title card-title card-title'
+    'btn-recipe . btn-liked';
+  border: #dbdbdb 1px solid;
+}
+
+.card-img {
+  overflow: hidden;
+  box-sizing: border-box;
+  grid-area: card-img;
+}
+
+.img-food {
+  width: 100%;
+  min-height: 250px;
+  object-fit: cover;
+}
+
+.card-title {
+  grid-area: card-title;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0.2rem;
+}
+
+.btn-recipe {
+  background: rgb(221, 21, 21);
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 0.1rem 0.4rem;
+  cursor: pointer;
+}
+
+.btn-liked {
+  cursor: pointer;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+  background: white;
+  border: none;
+  color: rgb(221, 21, 21);
+  font-weight: bold;
+  font-size: 0.8em;
+  padding: 0.1rem 0.2rem;
+}
+
+.no-grid {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.hiden {
+  display: none !important;
+}
+
+.popuptext {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%;
+  background-color: #f6e0c0;
+  color: #333;
+  border-radius: 6px;
+  padding: 8px 0;
+}
+
+.popuptext button {
+  cursor: pointer;
+  align-self: flex-end;
+  margin: 10px 20px;
+  padding: 5px;
+  font-weight: bold;
+  background-color: #f6e0c0;
+  color: #333;
+  border: none;
+  font-size: xx-large;
+}
+
+.show {
+  animation: fadeIn 1s;
+}
+
+.recipe {
+  height: 140px;
+  overflow-y: scroll;
+}
+
+.mesgFormContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mesgContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.mesgContent input,
+.mesgContent textarea {
+  margin-bottom: 10px;
+  color: #333;
+  border-radius: 6px;
+  font-size: medium;
+}
+
+.mesgContent input[type='button'] {
+  background-color: #f6e0c0;
+  border: 1px solid #333;
+  font-weight: bold;
+  padding: 5px;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+.mesgContent div {
+  width: 100%;
+}
+
+.aligCener {
+  align-self: center;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f3d4a6;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #333;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Add animation (fade in the popup) */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  header {
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+}
