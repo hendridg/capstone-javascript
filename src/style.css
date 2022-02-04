@@ -151,14 +151,6 @@ li:hover {
   cursor: pointer;
 }
 
-/* .btn-liked {
-  grid-area: btn-liked;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  padding: 0.2rem;
-} */
-
 .btn-liked {
   cursor: pointer;
   display: flex;
