@@ -1,4 +1,5 @@
 import './style.css';
+import logoBack from './cookBanner3.jpg';
 import getAllData from './getDataFood.js';
 
 // eslint-disable-next-line operator-linebreak
@@ -11,10 +12,6 @@ const allPastaURL = `
   https://www.themealdb.com/api/json/v1/1/filter.php?c=pasta`;
 const allSeafoodURL = `
   https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood`;
-
-// link to likes and message store api
-// const projectID = 'cq8n4ydnTGepOHztUKmY';
-// const likesLink = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/cq8n4ydnTGepOHztUKmY/likes/';
 
 liBeefElement.addEventListener('click', () => {
   typeFoodSelected = liBeefElement;
@@ -50,3 +47,7 @@ liSeafoodElement.addEventListener('click', () => {
 });
 
 getAllData(allBeefURL, typeFoodSelected);
+
+// logo immage create
+const logoImage = new Image();
+logoImage.src = logoBack;
