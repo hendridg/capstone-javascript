@@ -1,5 +1,5 @@
 import './style.css';
-import logoBack from './cookBanner3.jpg';
+import logoBack from './assets/cookBanner3.jpg';
 import getAllData from './getDataFood.js';
 
 // eslint-disable-next-line operator-linebreak

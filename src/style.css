@@ -50,7 +50,7 @@ header {
   border-bottom: 2px #dbdbdb solid;
   color: #333;
   height: 100px;
-  background: no-repeat center/100% url('./cookBanner3.jpg');
+  background: no-repeat center/100% url('./assets/cookBanner3.jpg');
 }
 
 footer {
@@ -84,7 +84,7 @@ main {
 .logo * {
   padding: 10px;
   margin: 0;
-  font-family: "Brush Script MT", cursive;
+  font-family: 'Brush Script MT', cursive;
 }
 
 .nav-bar-list {
@@ -234,7 +234,7 @@ li:hover {
   font-size: medium;
 }
 
-.mesgContent input[type=button] {
+.mesgContent input[type='button'] {
   background-color: #f6e0c0;
   border: 1px solid #333;
   font-weight: bold;
