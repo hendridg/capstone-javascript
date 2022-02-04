@@ -5,7 +5,8 @@ Capstone Group Project JavaScript
 
 > Capstone JavaScript using HTML, CSS, Jest, JavaScripts, GitFlow and Webpack
 
-![screenshot](./Home.png)
+![screenshot](./screenshot.png)
+![screenshot](./popup.png)
 
 ## Live Demo
 
