@@ -84,9 +84,9 @@ main {
 .logo * {
   padding: 10px;
   margin: 0;
-  font-family: "Brush Script MT", Cursive;
-  	
+  font-family: "Brush Script MT", cursive;
 }
+
 .nav-bar-list {
   padding: 0;
   list-style: none;
@@ -218,7 +218,6 @@ li:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 
 .mesgContent {
@@ -262,17 +261,17 @@ input:focus {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f3d4a6; 
+  background: #f3d4a6;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #333; 
+  background: #333;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555; 
+  background: #555;
 }
 
 /* Add animation (fade in the popup) */
