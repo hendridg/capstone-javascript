@@ -42,8 +42,7 @@ const createPopup = (details, msgDat) => {
 
 // function to get each element data
 const getItemData = async (id) => {
-  const foodItemDataURL =
-    'https://www.themealdb.com/api/json/v1/1/lookup.php?i=';
+  const foodItemDataURL = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=';
   const request = new Request(foodItemDataURL + id);
   const response = await fetch(request);
   const responseJson = await response.json();
