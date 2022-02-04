@@ -4,6 +4,8 @@
   "description": "Capstone Group Project JavaScript ![](https://img.shields.io/badge/Microverse-blueviolet)",
   "private": true,
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "test": "jest --env=jsdom",
     "start": "webpack serve --open",
     "build": "webpack"
@@ -32,6 +34,7 @@
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.25.4",
+    "gh-pages": "^3.2.3",
     "hint": "^6.1.9",
     "html-webpack-plugin": "^5.5.0",
     "jest": "^27.4.7",

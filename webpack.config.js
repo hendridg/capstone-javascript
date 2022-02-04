@@ -16,6 +16,7 @@ module.exports = {
     }),
   ],
   output: {
+    publicPath: "/capstone-javascript/",
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
