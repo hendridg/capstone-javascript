@@ -1,5 +1,5 @@
-import { displayCounter } from '../getDataFood.js';
-import { countComment } from '../displayComents.js';
+import { displayCounter } from '../modules/getDataFood.js';
+import { countComment } from '../modules/displayComents.js';
 
 beforeAll(() => {
   document.body.innerHTML = `  
