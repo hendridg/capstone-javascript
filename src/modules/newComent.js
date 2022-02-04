@@ -2,7 +2,8 @@ import { displayComents, getComments } from './displayComents.js';
 
 // function to post element
 const postNewMessage = async (id, name, text) => {
-  const postMessageLink = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/cq8n4ydnTGepOHztUKmY/comments';
+  const postMessageLink =
+    'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/cq8n4ydnTGepOHztUKmY/comments';
   const request = new Request(postMessageLink);
   const data = {
     method: 'POST',
@@ -47,7 +48,9 @@ const newMessageForm = (container, itemId) => {
   const button = document.createElement('input');
   button.type = 'button';
   button.value = 'Comment';
-  button.addEventListener('click', () => newMessage(itemId, userName, textMessage));
+  button.addEventListener('click', () =>
+    newMessage(itemId, userName, textMessage)
+  );
   formNewMessage.appendChild(userName);
   formNewMessage.appendChild(textMessage);
   formNewMessage.appendChild(button);
