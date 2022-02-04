@@ -6,7 +6,7 @@ module.exports = {
     index: './src/index.js',
   },
   devServer: {
-    static: './dist',
+    static: './docs',
   },
   mode: 'development',
   plugins: [
@@ -18,7 +18,7 @@ module.exports = {
   output: {
     publicPath: '/capstone-javascript/',
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'docs'),
     clean: true,
   },
   module: {
